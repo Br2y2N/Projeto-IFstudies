@@ -16,7 +16,7 @@ const questions = {
             correct: 3
         },
         {
-            question:"TESTE !",
+            question: "TESTE ",
             options: ["1","2","3","4"],
             correct: 2
         }
