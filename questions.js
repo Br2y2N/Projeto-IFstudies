@@ -16,7 +16,7 @@ const questions = {
             correct: 3
         },
         {
-              question: "Qual é o tempo verbal da oração: 'Se eu estudasse mais, passaria no exame'?",
+              question: "Qual é o tempo verbal: 'Se eu estudasse mais, passaria no exame'?",
             options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
             correct: 2
         }
