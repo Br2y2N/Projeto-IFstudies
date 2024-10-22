@@ -19,6 +19,11 @@ const questions = {
               question: "Qual é o tempo verbal: 'Se eu estudasse mais, passaria no exame'?",
             options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
             correct: 2
+        },
+        { question: "Qual o tamanho do meu piru?",
+         options: ["13 cm","15cm",33cm","45cm"],
+         correct: 3
+            
         }
     ],
     matematica: [
