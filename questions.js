@@ -24,7 +24,7 @@ const questions = {
          options: ["13 cm","15cm",33cm","45cm"],
          correct: 3
             
-        }
+        },
     ],
     matematica: [
         {
