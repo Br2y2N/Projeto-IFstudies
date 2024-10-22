@@ -16,12 +16,12 @@ const questions = {
             correct: 3
         },
         {
-              question: "Qual é o tempo verbal: 'Se eu estudasse mais, passaria no exame'?",
+            question: "Qual é o tempo verbal: 'Se eu estudasse mais, passaria no exame'?",
             options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
-            correct: 2
+            correct: 3 // Corrigido para 3
         },
-          {
-              question: "teste",
+        {
+            question: "teste",
             options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
             correct: 2
         },
