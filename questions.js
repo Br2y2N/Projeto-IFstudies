@@ -20,10 +20,10 @@ const questions = {
             options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
             correct: 2
         },
-        { question: "Qual o tamanho do meu piru?",
-         options: ["13 cm","15cm",33cm","45cm"],
-         correct: 3
-            
+          {
+              question: "teste",
+            options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
+            correct: 2
         },
     ],
     matematica: [
