@@ -24,6 +24,82 @@
             const feedbackMessage = document.getElementById("feedback-message");
             feedbackMessage.textContent = feedback === "correct" ? "Parabéns, resposta correta!" : "Resposta incorreta. Tente novamente!";
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    const questionsContainer = document.getElementById("questions-container");
+
+    let currentQuestionIndex = 0;
+    let correctAnswers = 0;
+    let incorrectAnswers = [];
+
+    function showQuestion() {
+        const question = questions[subject][currentQuestionIndex];
+
+        questionsContainer.innerHTML = `
+            <h2>${question.question}</h2>
+            ${question.options.map((option, index) => `
+                <button class="option" onclick="checkAnswer(${index})">${option}</button>
+            `).join('')}
+        `;
+    }
+
+    window.checkAnswer = function(selectedOption) {
+        const question = questions[subject][currentQuestionIndex];
+
+        // Check the answer
+        if (selectedOption === question.correct) {
+            correctAnswers++;
+            showFeedback(true);
+        } else {
+            incorrectAnswers.push({
+                question: question.question,
+                selected: question.options[selectedOption],
+                correct: question.options[question.correct]
+            });
+            showFeedback(false);
+        }
+
+        // Move to the next question after a delay
+        setTimeout(() => {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions[subject].length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }, 2000); // Tempo de espera antes de mostrar a próxima pergunta
+    };
+
+    function showFeedback(isCorrect) {
+        const feedbackMessage = isCorrect ? "Parabéns, você acertou!" : "Resposta incorreta. Tente novamente!";
+        questionsContainer.innerHTML = `
+            <h2>${feedbackMessage}</h2>
+        `;
+    }
+
+    function showResults() {
+        questionsContainer.innerHTML = `
+            <h2>Resultado</h2>
+            <p>Você acertou ${correctAnswers} de ${questions[subject].length} perguntas.</p>
+            ${incorrectAnswers.length > 0 ? '<h3>Erros:</h3>' : ''}
+            ${incorrectAnswers.map(incorrect => `
+                <div class="result-item">
+                    <p><strong>Pergunta:</strong> ${incorrect.question}</p>
+                    <p><strong>Resposta Selecionada:</strong> ${incorrect.selected}</p>
+                    <p><strong>Resposta Correta:</strong> ${incorrect.correct}</p>
+                </div>
+            `).join('')}
+            <button onclick="window.location.href = 'index.html';">Voltar ao Início</button>
+        `;
+    }
+
+    showQuestion();
+});
+
+
+        
     </script>
 </body>
 </html>
