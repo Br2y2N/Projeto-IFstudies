@@ -21,8 +21,8 @@ const questions = {
             correct: 3 // Corrigido para 3
         },
         {
-            question: "Qual o meu sobrenome?",
-            options: ["Oliveira", "Silva", "Ferreira", "Cardoso"],
+            question: "Qual o meu nome?",
+            options: ["Brayan", "Ycaro", "Ferreira", "Matheus"],
             correct: 0
         },
     ],
