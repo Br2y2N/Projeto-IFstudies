@@ -21,9 +21,9 @@ const questions = {
             correct: 3 // Corrigido para 3
         },
         {
-            question: "teste",
-            options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
-            correct: 2
+            question: "Qual o meu sobrenome?",
+            options: ["Oliveira", "Silva", "Ferreira", "Cardoso"],
+            correct: 0
         },
     ],
     matematica: [
