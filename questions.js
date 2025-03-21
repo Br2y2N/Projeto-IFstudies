@@ -20,11 +20,7 @@ const questions = {
             options: ["Pretérito Perfeito", "Pretérito Imperfeito", "Futuro do Presente", "Futuro do Pretérito"],
             correct: 3 // Corrigido para 3
         },
-        {
-            question: "Qual o meu nome?",
-            options: ["Brayan", "Ycaro", "Ferreira", "Matheus"],
-            correct: 0
-        },
+        
     ],
     matematica: [
         {
